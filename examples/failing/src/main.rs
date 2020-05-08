@@ -2,13 +2,6 @@ use std::ffi::CString;
 
 use libdqlite_sys as sys;
 
-#[derive(Debug)]
-struct Person {
-    id: i32,
-    name: String,
-    data: Option<Vec<u8>>,
-}
-
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     println!("hello world {}", unsafe {
         libsqlite3_sys::sqlite3_libversion_number()
