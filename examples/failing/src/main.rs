@@ -1,7 +1,5 @@
 use std::ffi::CString;
 
-use libsqlite3_sys;
-
 use libdqlite_sys as sys;
 
 #[derive(Debug)]
