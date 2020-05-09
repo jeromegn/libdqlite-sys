@@ -4,6 +4,9 @@ use std::path::PathBuf;
 fn main() {
     // Tell cargo to tell rustc to link the system bzip2
     // shared library.
+    println!("cargo:rustc-link-search={}", "/usr/lib/sqlite-replication");
+    println!("cargo:rustc-link-lib={}", "sqlite3");
+
     println!("cargo:rustc-link-lib=dqlite");
 
     // Tell cargo to invalidate the built crate whenever the wrapper changes
